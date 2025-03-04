@@ -1,0 +1,218 @@
+<% layout("/layouts/boilerplate") %>
+
+<!-- Header -->
+<header class="bg-light py-3 mb-4">
+  <div class="container">
+    <h1 class="mb-0">Privacy Policy</h1>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mb-5">
+  <div class="accordion" id="privacyAccordion">
+    <!-- Introduction -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingIntro">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseIntro"
+          aria-expanded="true"
+          aria-controls="collapseIntro"
+        >
+          Introduction
+        </button>
+      </h2>
+      <div
+        id="collapseIntro"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingIntro"
+        data-bs-parent="#privacyAccordion"
+      >
+        <div class="accordion-body">
+          <p>
+            We value your privacy and are committed to protecting your personal
+            information.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Information We Collect -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCollect">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseCollect"
+          aria-expanded="false"
+          aria-controls="collapseCollect"
+        >
+          Information We Collect
+        </button>
+      </h2>
+      <div
+        id="collapseCollect"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingCollect"
+        data-bs-parent="#privacyAccordion"
+      >
+        <div class="accordion-body">
+          <p>
+            We collect information such as name, email, phone number, and
+            payment details when you use our platform.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- How We Use Your Information -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingUse">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseUse"
+          aria-expanded="false"
+          aria-controls="collapseUse"
+        >
+          How We Use Your Information
+        </button>
+      </h2>
+      <div
+        id="collapseUse"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingUse"
+        data-bs-parent="#privacyAccordion"
+      >
+        <div class="accordion-body">
+          <p>
+            Your data is used to improve our services, process bookings, and
+            enhance user experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sharing Your Information -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingShare">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseShare"
+          aria-expanded="false"
+          aria-controls="collapseShare"
+        >
+          Sharing Your Information
+        </button>
+      </h2>
+      <div
+        id="collapseShare"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingShare"
+        data-bs-parent="#privacyAccordion"
+      >
+        <div class="accordion-body">
+          <p>
+            We do not sell your personal data but may share it with trusted
+            third-party services for payment processing and security.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Measures -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSecurity">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseSecurity"
+          aria-expanded="false"
+          aria-controls="collapseSecurity"
+        >
+          Security Measures
+        </button>
+      </h2>
+      <div
+        id="collapseSecurity"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingSecurity"
+        data-bs-parent="#privacyAccordion"
+      >
+        <div class="accordion-body">
+          <p>
+            We implement industry-standard security practices to protect your
+            data from unauthorized access.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your Rights -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingRights">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseRights"
+          aria-expanded="false"
+          aria-controls="collapseRights"
+        >
+          Your Rights
+        </button>
+      </h2>
+      <div
+        id="collapseRights"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingRights"
+        data-bs-parent="#privacyAccordion"
+      >
+        <div class="accordion-body">
+          <p>
+            You have the right to access, update, or delete your information by
+            contacting us.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Changes to Privacy Policy -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingChanges">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseChanges"
+          aria-expanded="false"
+          aria-controls="collapseChanges"
+        >
+          Changes to Privacy Policy
+        </button>
+      </h2>
+      <div
+        id="collapseChanges"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingChanges"
+        data-bs-parent="#privacyAccordion"
+      >
+        <div class="accordion-body">
+          <p>
+            We may update this policy periodically. Please review it regularly.
+          </p>
+        </div>
+      </div>
+    </div>
+    <form action="/listings">
+      <button class="btn btn-dark offset-5 mt-3">Home</button>
+    </form>
+  </div>
+</main>

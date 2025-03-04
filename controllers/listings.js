@@ -4,7 +4,18 @@ const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index = async (req, res) => {
-  const allListings = await Listing.find({});
+  let allListings = await Listing.find({});
+  let { Search } = req.query;
+  if (Search) {
+    let searchListing = await Listing.find({ location: { $in: Search } });
+    if (searchListing.length === 0) {
+      req.flash("error", "No such place found!");
+      return res.redirect("/listings");
+    } else {
+      allListings = searchListing;
+    }
+  }
+
   res.render("listings/index", { allListings });
 };
 

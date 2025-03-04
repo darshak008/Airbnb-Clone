@@ -126,3 +126,19 @@ body {
   height: 25rem;
   width: 45rem;
 }
+
+/* Medium screens (example: up to 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    height: auto; /* Remove fixed height on medium screens */
+    padding: 2rem; /* Increase padding for medium screens */
+  }
+}
+
+/* Small screens (phone, example: up to 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    height: auto; /* Remove fixed height on phones */
+    padding: 1rem; /* Add padding for phones */
+  }
+}

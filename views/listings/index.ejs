@@ -1,10 +1,20 @@
 <% layout("/layouts/boilerplate") %>
 <style>
   #filters {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: flex; /* use flexbox */
+    flex-wrap: nowrap; /* prevent wrapping so items line up horizontally */
+    overflow-x: auto; /* enable horizontal scrolling if needed */
+    gap: 1rem; /* space between items */
+    padding: 0 1rem; /* optional horizontal padding */
+
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
   }
+
+  #filters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari */
+  }
+
   .filter {
     text-align: center;
     margin-right: 2rem;
@@ -28,11 +38,39 @@
   .tax-toggle {
     border: 1px solid black;
     border-radius: 1rem;
+    margin: auto;
     height: 3.25rem;
     padding: 1rem;
     display: flex;
     align-items: center;
-    margin-left: 1rem;
+  }
+
+  .filter,
+  .tax-toggle {
+    flex: 0 0 auto; /* prevent shrinking so each item stays its width */
+    text-align: center;
+    /* You can also set a min-width if you want consistent item widths */
+    /* min-width: 80px; */
+  }
+
+  @media (min-width: 768px) {
+    .tax-toggle {
+      width: 16rem !important;
+      margin-left: 27.5rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .tax-toggle {
+      /* width: 16rem !important; */
+      margin-left: 42.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .tax-toggle {
+      margin-left: 53.75rem;
+    }
   }
 </style>
 <div id="filters">
@@ -96,18 +134,18 @@
     </div>
     <p>Lake</p>
   </div>
-  <div class="tax-toggle">
-    <div class="form-check-reverse form-switch">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        role="switch"
-        id="flexSwitchCheckDefault"
-      />
-      <label class="form-check-label" for="flexSwitchCheckDefault"
-        >Display total after taxes</label
-      >
-    </div>
+</div>
+<div class="tax-toggle">
+  <div class="form-check-reverse form-switch">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="flexSwitchCheckDefault"
+    />
+    <label class="form-check-label" for="flexSwitchCheckDefault"
+      >Display total after taxes</label
+    >
   </div>
 </div>
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
